@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="facebook">
+    <ion-title>
+      Facebook Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button (click)="login()" ion-button block color="facebook">
+    <ion-icon name="logo-facebook"></ion-icon>
+  </button>
+
+  <ion-card *ngIf="user">
+    <img [src]="user.picture.data.url">
+    <ion-card-content>
+      <ion-card-title>
+        {{user.name}}
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
